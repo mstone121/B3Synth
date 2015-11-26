@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="alSihh" name="B3Synth" projectType="audioplug" version="1.0.0"
+              bundleIdentifier="com.yourcompany.B3Synth" includeBinaryInAppConfig="1"
+              buildVST="1" buildVST3="0" buildAU="0" buildRTAS="0" buildAAX="0"
+              pluginName="B3Synth" pluginDesc="B3Synth" pluginManufacturer="Matt Stone"
+              pluginManufacturerCode="B3MS" pluginCode="B3MS" pluginChannelConfigs="{1, 1}, {2, 2}"
+              pluginIsSynth="1" pluginWantsMidiIn="1" pluginProducesMidiOut="0"
+              pluginSilenceInIsSilenceOut="0" pluginEditorRequiresKeys="0"
+              pluginAUExportPrefix="" pluginRTASCategory="" aaxIdentifier=""
+              pluginAAXCategory="" jucerVersion="3.2.0">
+  <MAINGROUP id="T30Fxv" name="B3Synth">
+    <GROUP id="{60DF10B4-712A-2913-0877-3E4A9810AAEB}" name="Source">
+      <FILE id="qO3NF8" name="DrawbarSettings.h" compile="0" resource="0"
+            file="Source/DrawbarSettings.h"/>
+      <FILE id="NsylAZ" name="Drawbar.cpp" compile="1" resource="0" file="Source/Drawbar.cpp"/>
+      <FILE id="OzD5SB" name="Drawbar.h" compile="0" resource="0" file="Source/Drawbar.h"/>
+      <FILE id="BAM5t8" name="Voice.cpp" compile="1" resource="0" file="Source/Voice.cpp"/>
+      <FILE id="PaGk8Y" name="Voice.h" compile="0" resource="0" file="Source/Voice.h"/>
+      <FILE id="qjBfxz" name="Wavetable.cpp" compile="1" resource="0" file="Source/Wavetable.cpp"/>
+      <FILE id="t3oQYx" name="Wavetable.h" compile="0" resource="0" file="Source/Wavetable.h"/>
+      <FILE id="HTAEze" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="T1hUPG" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="VLeSyV" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="BN5574" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <VS2015 targetFolder="Builds/VisualStudio2015">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="1" optimisation="1" targetName="B3Synth"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="0" optimisation="3" targetName="B3Synth"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../../JUCE-master/modules"/>
+        <MODULEPATH id="juce_events" path="../../../JUCE-master/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../JUCE-master/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../JUCE-master/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../JUCE-master/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../JUCE-master/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../JUCE-master/modules"/>
+        <MODULEPATH id="juce_video" path="../../../JUCE-master/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../JUCE-master/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../../JUCE-master/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../JUCE-master/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../JUCE-master/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../JUCE-master/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../JUCE-master/modules"/>
+      </MODULEPATHS>
+    </VS2015>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+</JUCERPROJECT>

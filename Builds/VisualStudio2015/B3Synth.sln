@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2015
+Project("{FA98D1E6-E41D-D662-861A-FF3806A2B40A}") = "B3Synth", "B3Synth.vcxproj", "{C1938AE7-F408-6102-51E9-A8D756F8E887}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1938AE7-F408-6102-51E9-A8D756F8E887}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C1938AE7-F408-6102-51E9-A8D756F8E887}.Debug|Win32.Build.0 = Debug|Win32
+		{C1938AE7-F408-6102-51E9-A8D756F8E887}.Release|Win32.ActiveCfg = Release|Win32
+		{C1938AE7-F408-6102-51E9-A8D756F8E887}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
