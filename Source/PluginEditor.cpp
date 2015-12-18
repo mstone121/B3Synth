@@ -20,8 +20,8 @@ B3synthAudioProcessorEditor::B3synthAudioProcessorEditor (B3synthAudioProcessor&
     // editor's size to whatever you need it to be.
 	initDrawbars();
 
-    setSize (400, 300);
-
+    setSize (500, 300);
+	getLookAndFeel().setDefaultSansSerifTypefaceName("Unifont");
 }
 
 B3synthAudioProcessorEditor::~B3synthAudioProcessorEditor()
@@ -44,12 +44,13 @@ void B3synthAudioProcessorEditor::resized()
 	const int control_height = CONTROL_HEIGHT;
 	for (int i = 0; i < DRAWBAR_COUNT; ++i) {
 		drawbars[i].setBounds(MAIN_MARGIN + (i * control_width), 30, control_width, control_height);
+		drawbars[i].drawbar.setValue(processor.drawbar_values[i], dontSendNotification);
 	}
 }
 
 void B3synthAudioProcessorEditor::initDrawbars()
 {
-	const String labels[DRAWBAR_COUNT] = {
+	const juce::String labels[DRAWBAR_COUNT] = {
 		DRAWBAR_LABEL_1,
 		DRAWBAR_LABEL_2,
 		DRAWBAR_LABEL_3,

@@ -24,7 +24,7 @@ Drawbar::Drawbar()
 
 	addAndMakeVisible(drawbar_label);
 	drawbar_label.setText("", dontSendNotification);
-	drawbar_label.attachToComponent(&drawbar, false);	
+	//drawbar_label.attachToComponent(&drawbar, true);	
 
 }
 
@@ -54,7 +54,8 @@ void Drawbar::paint (Graphics& g)
 
 void Drawbar::resized()
 {
-	drawbar.setBounds(getLocalBounds());
+	drawbar.setBounds(0, 21, getWidth(), getHeight() - 20);
+	drawbar_label.setBounds(0, 0, getWidth(), 20);
 }
 
 void Drawbar::setLabel(const String label_text)
