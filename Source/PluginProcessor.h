@@ -65,7 +65,7 @@ public:
 
 	std::list<Voice> voices;
 	
-	double* drawbar_values;
+	int drawbar_values[DRAWBAR_COUNT];
 
 	void updateWavetables();
 
@@ -73,7 +73,7 @@ private:
     //==============================================================================
 	JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(B3synthAudioProcessor);
 
-	Wavetable* wavetables;
+	Wavetable wavetables[NUM_OF_TABLES];
 
 	void processMidiMessage(MidiMessage &message);
 };

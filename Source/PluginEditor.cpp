@@ -61,7 +61,7 @@ void B3synthAudioProcessorEditor::initDrawbars()
 		DRAWBAR_LABEL_9
 	};
 
-	drawbars = new Drawbar[DRAWBAR_COUNT];
+	drawbars[DRAWBAR_COUNT];
 
 	// Create and Display
 	for (int i = 0; i < DRAWBAR_COUNT; ++i) {

@@ -35,7 +35,7 @@ public:
     void resized() override;
 
 private:	
-	Drawbar* drawbars;
+	Drawbar drawbars[DRAWBAR_COUNT];
 
 	void initDrawbars();
 	

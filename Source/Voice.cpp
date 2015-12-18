@@ -34,7 +34,7 @@ int Voice::operator==(const Voice &other) const
 
 float Voice::getNextSample()
 {
-	if (index > (*osc).table_length)
+	if (index >= (*osc).table_length)
 		index %= (*osc).table_length;
 
 	float val = (*osc).table[index];

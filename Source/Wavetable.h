@@ -19,22 +19,22 @@ class Wavetable
 {
 public:
 	// Vars
-	float* table;
+	std::vector<float> table;
 	int table_length;
 
 	//Funcs
-	Wavetable(double const &base_freq, double const &sample_rate, double drawbar_values[]);
+	Wavetable(double const &base_freq, double const &sample_rate, int* drawbar_values);
 	Wavetable();
 	~Wavetable();
 	
-	void checkTable(double const &base_freq, double const &sample_rate, double drawbar_values[]);
+	void checkTable(double const &base_freq, double const &sample_rate, int* drawbar_values);
 
 private:
 	
 	// Vars
 	double base_freq;
 	double sample_rate;
-	double* drawbar_values;
+	int* drawbar_values;
 
 	// Funcs
 	void updateTable();

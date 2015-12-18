@@ -15,8 +15,8 @@
 //==============================================================================
 B3synthAudioProcessor::B3synthAudioProcessor()
 {
-	wavetables = new Wavetable[NUM_OF_TABLES];
-	drawbar_values = new double[DRAWBAR_COUNT];
+	Wavetable wavetables[NUM_OF_TABLES];
+	updateWavetables();
 }
 
 B3synthAudioProcessor::~B3synthAudioProcessor()
@@ -119,19 +119,6 @@ void B3synthAudioProcessor::releaseResources()
 
 void B3synthAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& midiMessages)	
 {
-	// Process Midi
-	if (!midiMessages.isEmpty())
-	{
-		MidiBuffer::Iterator iterator(midiMessages);
-		MidiMessage message;
-		int samplePosition;
-
-		while (iterator.getNextEvent(message, samplePosition))
-			processMidiMessage(message);
-
-	}
-
-	
 	// Clear channels
 	if (voices.empty())
 	{
@@ -158,6 +145,18 @@ void B3synthAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer&
 				++it;
 			}
 		}
+	}
+
+	// Process Midi
+	if (!midiMessages.isEmpty())
+	{
+		MidiBuffer::Iterator iterator(midiMessages);
+		MidiMessage message;
+		int samplePosition;
+
+		while (iterator.getNextEvent(message, samplePosition))
+			processMidiMessage(message);
+
 	}
 }
 
@@ -222,7 +221,13 @@ AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 
 //====================== Other Functions =======================================
 void B3synthAudioProcessor::updateWavetables() {
+	double sample_rate;
+	if (getSampleRate() == 0)
+		sample_rate = 48000;
+	else
+		sample_rate = getSampleRate();
+
 	for (int i = 0; i < NUM_OF_TABLES; ++i)
-		wavetables[i].checkTable(MidiMessage::getMidiNoteInHertz(i), getSampleRate(), drawbar_values);
+		wavetables[i].checkTable(MidiMessage::getMidiNoteInHertz(i), sample_rate, drawbar_values);
 
 }
