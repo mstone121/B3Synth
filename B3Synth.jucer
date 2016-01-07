@@ -2,13 +2,13 @@
 
 <JUCERPROJECT id="alSihh" name="B3Synth" projectType="audioplug" version="1.0.0"
               bundleIdentifier="com.yourcompany.B3Synth" includeBinaryInAppConfig="1"
-              buildVST="1" buildVST3="0" buildAU="0" buildRTAS="0" buildAAX="0"
+              buildVST="1" buildVST3="0" buildAU="1" buildRTAS="0" buildAAX="0"
               pluginName="B3Synth" pluginDesc="B3Synth" pluginManufacturer="Matt Stone"
               pluginManufacturerCode="B3MS" pluginCode="B3MS" pluginChannelConfigs="{1, 1}, {2, 2}"
               pluginIsSynth="1" pluginWantsMidiIn="1" pluginProducesMidiOut="0"
               pluginSilenceInIsSilenceOut="0" pluginEditorRequiresKeys="0"
               pluginAUExportPrefix="" pluginRTASCategory="" aaxIdentifier=""
-              pluginAAXCategory="" jucerVersion="4.0.2">
+              pluginAAXCategory="" jucerVersion="4.1.0" pluginIsMidiEffectPlugin="0">
   <MAINGROUP id="T30Fxv" name="B3Synth">
     <GROUP id="{60DF10B4-712A-2913-0877-3E4A9810AAEB}" name="Source">
       <FILE id="qO3NF8" name="DrawbarSettings.h" compile="0" resource="0"
