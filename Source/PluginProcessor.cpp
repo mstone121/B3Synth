@@ -221,12 +221,10 @@ AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 
 //====================== Other Functions =======================================
 void B3synthAudioProcessor::updateWavetables() {
-	double sample_rate;
-	if (getSampleRate() == 0)
+	double sample_rate = getSampleRate();
+	if (sample_rate == 0)
 		sample_rate = 48000;
-	else
-		sample_rate = getSampleRate();
-
+	
 	for (int i = 0; i < NUM_OF_TABLES; ++i)
 		wavetables[i].checkTable(MidiMessage::getMidiNoteInHertz(i), sample_rate, drawbar_values);
 
